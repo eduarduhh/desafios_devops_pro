@@ -1,0 +1,11 @@
+version: '3'
+services:
+  db_maria:
+    env_file: .env
+    container_name: db_maria
+    image: mariadb:10.2
+    ports:
+        - "3308:3306"
+    volumes:
+        - ./data/infra/database:/var/lib/mysql
+   
